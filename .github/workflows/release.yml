@@ -23,7 +23,9 @@ jobs:
 
     - name: Install dependencies
       run: go get .
-           apt install libsdl2{,-image,-mixer,-ttf,-gfx}-dev
+      
+    - name: Install SDL2
+      run: apt install libsdl2{,-image,-mixer,-ttf,-gfx}-dev
       
     - name: Build
       run: go build -v ./...
